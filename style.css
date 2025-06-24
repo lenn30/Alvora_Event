@@ -1,297 +1,369 @@
-/* Base */
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    color: #4B3F3F;
-    line-height: 1.6;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #4b3f3f;
+  line-height: 1.6;
 }
 
-/* Header */
+
 header {
-    background-color: #ffffff;
-    padding: 20px 50px;
-    text-align: left;
+  background: #ffffff;
+  padding: 10px 0;
+  text-align: left;
 }
 
 header .logo {
-    height: 70px;
+  height: 200px;
+  margin: 0 auto;
+  align-items: center;
 }
 
-/* Hero Section */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 50px;
-    background-color: #F9F1EF;
+  background: #f9f1ef;
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero-text {
-    max-width: 50%;
+  flex: 1;
 }
 
 .hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #4B3F3F;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .hero-text h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #D4AF37;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.hero-text .highlight {
+  color: #d4af37;
+  font-weight: bold;
 }
 
 .hero-text p {
-    font-size: 18px;
+  margin: 20px 0;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
 }
 
 .hero-image img {
-    max-width: 400px;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+  filter: drop-shadow(0 12px 20px rgba(212, 175, 55, 0.4));
 }
 
-.hero-image img:hover {
-    transform: scale(1.05);
-}
 
-/* Team Section */
 .team-section {
-    padding: 60px 50px;
-    background-color: #fff;
-    text-align: center;
+  background: #ffffff;
+  padding: 60px 50px;
+  text-align: center;
 }
 
 .team-section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.carousel-buttons button {
+  background-color: #c9a9a6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .team-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .team-member {
-    background-color: #F9F1EF;
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #f9f1ef;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .team-member p {
-    font-weight: 600;
-    color: #4B3F3F;
+  font-weight: 600;
+  color: #4b3f3f;
 }
 
 .team-member:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Highlight Section */
+
 .highlight-section {
-    position: relative;
-    padding: 0;
+  position: relative;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffffff, #fff7f8);
 }
 
 .highlight-img {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    filter: brightness(60%) blur(2px);
+  display: block;
+  margin: 40px auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
 }
 
 .highlight-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
 }
 
-/* Testimonial Carousel */
+.highlight-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: calc(100% + 200px);
+  height: 100%;
+  background: radial-gradient(circle at left, rgba(255, 245, 200, 0.25), transparent 50%),
+              radial-gradient(circle at right, rgba(255, 220, 255, 0.25), transparent 50%);
+  z-index: 0;
+}
+
+.highlight-section::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15), transparent 70%);
+}
+
+
+.gallery-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 0 20px;
+}
+
+
 .testimonial-section {
-    padding: 60px 50px;
-    background-color: #F9F1EF;
-    text-align: center;
+  padding: 60px 50px;
+  background: #f9f1ef;
+  text-align: center;
 }
 
 .testimonial-section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
 .carousel {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .carousel-track img {
-    min-width: 100%;
-    border-radius: 15px;
+  min-width: 100%;
+  border-radius: 15px;
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(201, 169, 166, 0.8);
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    color: #fff;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(201, 169, 166, 0.8);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
 }
 
 .carousel-btn:hover {
-    background-color: #D4AF37;
+  background-color: #d4af37;
 }
 
 #prev {
-    left: 10px;
+  left: 10px;
 }
 
 #next {
-    right: 10px;
+  right: 10px;
 }
 
-/* Calendar Section */
+
 .calendar-section {
-    padding: 60px 50px;
-    background-color: #fff;
-    text-align: center;
+  padding: 60px 50px;
+  background: #ffffff;
+  text-align: center;
 }
 
 .calendar-section h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .calendar-section p {
-    margin-bottom: 30px;
-    font-size: 16px;
-    color: #4B3F3F;
+  font-size: 16px;
+  color: #4b3f3f;
+  margin-bottom: 30px;
 }
 
 .calendar {
-    max-width: 500px;
-    margin: 0 auto 20px;
-    border: 2px solid #C9A9A6;
-    border-radius: 12px;
-    overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  border: 2px solid #c9a9a6;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #C9A9A6;
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #c9a9a6;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold;
 }
 
 .calendar-header button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .calendar-body {
-    background-color: #F9F1EF;
-    padding: 20px;
+  background: #f9f1ef;
+  padding: 20px;
 }
 
-.day-names {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
+.day-names,
 .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
 }
 
 .calendar-days div {
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .calendar-days div:hover {
-    background-color: #C9A9A6;
-    color: #fff;
-    transform: scale(1.05);
+  background: #c9a9a6;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 .special-day {
-    background-color: #D4AF37 !important;
-    color: #fff !important;
+  background: #daa520;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-/* Book Now Button */
+
 .book-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #D4AF37;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #d4af37;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .book-btn:hover {
-    background-color: #C9A9A6;
+  background: #c9a9a6;
 }
 
-/* Footer */
+
 footer {
-    background-color: #C9A9A6;
-    padding: 20px 50px;
-    text-align: center;
-    color: #fff;
+  background: #c9a9a6;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 50px;
 }
 
 footer img {
-    height: 50px;
-    margin-bottom: 10px;
+  height: 50px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 footer p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
