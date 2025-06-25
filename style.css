@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -10,27 +9,28 @@ body {
 
 header {
   background: #ffffff;
-  padding: 10px 0;
-  text-align: left;
+  padding: 0px 0px;
+  text-align: center;
 }
 
 header .logo {
-  height: 200px;
+  height: 40px;
   margin: 0 auto;
   align-items: center;
 }
 
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px 20px;
 }
 
 
 .hero {
-  background: #f9f1ef;
-  padding: 60px 0;
+  background: linear-gradient(to bottom, #DDC4C2, #F6EAE9);
+  padding: 5px 120px; 
+  margin-bottom: -12px;
 }
 
 .hero-content {
@@ -68,15 +68,15 @@ header .logo {
 .hero-image {
   flex: 1;
   text-align: center;
+  padding: 0px;
 }
 
 .hero-image img {
   max-width: 100%;
   height: auto;
   border-radius: 0;
-  filter: drop-shadow(0 12px 20px rgba(212, 175, 55, 0.4));
+  filter: drop-shadow(0px 0px 15px rgba(212, 175, 55, 0.4));
 }
-
 
 .team-section {
   background: #ffffff;
@@ -89,26 +89,9 @@ header .logo {
   margin-bottom: 40px;
 }
 
-.carousel-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  gap: 20px;
-}
-
-.carousel-buttons button {
-  background-color: #c9a9a6;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 18px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 .team-container {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -139,7 +122,6 @@ header .logo {
   transform: scale(1.05);
 }
 
-
 .highlight-section {
   position: relative;
   padding: 60px 20px;
@@ -159,19 +141,25 @@ header .logo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
   z-index: 1;
 }
 
+.highlight-overlay h2 {
+  color: #4b3f3f;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 15px rgba(255, 255, 255, 0.9);
+}
+
 .highlight-section::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100px;
-  width: calc(100% + 200px);
+  left: 0;
   height: 100%;
   background: radial-gradient(circle at left, rgba(255, 245, 200, 0.25), transparent 50%),
               radial-gradient(circle at right, rgba(255, 220, 255, 0.25), transparent 50%);
@@ -185,7 +173,6 @@ header .logo {
   left: 0;
   width: 100%;
   height: 100px;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15), transparent 70%);
 }
 
 
@@ -215,48 +202,25 @@ header .logo {
   margin-bottom: 30px;
 }
 
-.carousel {
+.testimonial-track {
   position: relative;
-  width: 70%;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
+.testimonial-slide {
+  display: none;
+  width: 60%;
+  border-radius: 20px;
+  transition: opacity 1s ease-in-out;
+  margin: 0 auto;
 }
 
-.carousel-track img {
-  min-width: 100%;
-  border-radius: 15px;
+.testimonial-slide.active {
+  display: block;
 }
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(201, 169, 166, 0.8);
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  color: #fff;
-}
-
-.carousel-btn:hover {
-  background-color: #d4af37;
-}
-
-#prev {
-  left: 10px;
-}
-
-#next {
-  right: 10px;
-}
-
 
 .calendar-section {
   padding: 60px 50px;
@@ -352,18 +316,22 @@ header .logo {
 
 
 footer {
-  background: #c9a9a6;
-  color: #ffffff;
+  background: linear-gradient(to bottom, #DDC4C2, #F6EAE9);
+  color: #4b3f3f;
   text-align: center;
   padding: 20px 50px;
 }
 
 footer img {
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   align-items: center;
+  padding: 10px;
+  margin-top: 5x;
 }
 
 footer p {
   margin: 5px 0;
+
 }
+
