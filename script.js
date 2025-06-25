@@ -1,22 +1,16 @@
+// Hero
+const nama = prompt("Masukkan nama Anda:");
+document.getElementById("hero_h1").innerHTML = "Hi, " + nama + "!";
+
 //  Carousel  
-const track = document.querySelector('.carousel-track');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-let index = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+  let index = 0;
 
-prevBtn.addEventListener('click', () => {
-  index = (index > 0) ? index - 1 : track.children.length - 1;
-  updateCarousel();
-});
-
-nextBtn.addEventListener('click', () => {
-  index = (index + 1) % track.children.length;
-  updateCarousel();
-});
-
-function updateCarousel() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-}
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3000);
 
 // Calendar 
 const monthYear = document.getElementById('monthYear');
